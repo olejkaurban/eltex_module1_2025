@@ -1,0 +1,13 @@
+su user1
+ps -eLo pid,nlwp | awk ' > 1 {print }' | wc -l
+top
+vim ~/file_task3.txt
+sleep 600
+jobs
+bg %2
+ps aux | grep sleep
+renice 10 -p 15537
+ps -eo pid,comm,nice | grep sleep
+fg %1
+kill -15 15537
+jobs
