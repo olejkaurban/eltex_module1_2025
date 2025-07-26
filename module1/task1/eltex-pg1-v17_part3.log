@@ -1,0 +1,12 @@
+touch eltex-pg1-v17_part3.log
+touch file.txt
+ln -s /home/eltex-pg1-v17/D1/D2/file.txt soft_link
+ln /home/eltex-pg1-v17/D1/D2/file.txt hard_link
+ls -li
+mv file.txt ..
+rm D2 -r
+find ~ -type f -size +20M -exec du -h {} + > eltex-pg1-v17_part3_gt50M.log
+find ~ -type f -mtime -1 -print
+which find
+file /usr/bin/find
+file /boot/initrd.img*

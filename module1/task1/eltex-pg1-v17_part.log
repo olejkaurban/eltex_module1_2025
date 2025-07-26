@@ -1,0 +1,17 @@
+touch eltex-pg1-v17_part.log 
+echo $HIST
+echo 2000
+./.<TAB><TAB>
+export HISTTIMEFORMAT='%F %T '
+history 10
+export PROMPT_COMMAND='history -a'
+source ~/.bashrc
+DATE=Wed Jul 16 01:33:52 AM +07 2025
+TIME=01:35:30
+DATE_TIME=Wed Jul 16 10:45:41 AM +07 2025 10:45:58
+ls /bin /sbin | grep -E '[0-9]' >> 1.txt
+'PS1=u@H-A
+echo export PS1=\u@\H-\A> >> ~/.bashrc
+source ~/.bashrc
+mkdir 2025-0{1..9} 2025-1{0-2}
+truncate -s 21M example_file.txt
